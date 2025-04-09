@@ -17,9 +17,13 @@ function getArrayParams(...arr) {
         sum += arr[i];
     }
 
-    let avg = +((sum / arr.length).toFixed(2));  // среднее округленное до двух знаков
+    let avg = +((sum / arr.length).toFixed(2)); // среднее округленное до двух знаков
 
-    return {min: min, max: max, avg: avg};
+    return {
+        min: min,
+        max: max,
+        avg: avg
+    };
 }
 
 function summElementsWorker(...arr) {
@@ -53,7 +57,7 @@ function differenceEvenOddWorker(...arr) {
     }
 
     let sumEvenElement = 0; // сумма четных
-    let sumOddElement = 0;  // сумма нечетных
+    let sumOddElement = 0; // сумма нечетных
 
     for (let element of arr) {
         if (element % 2 === 0) {
