@@ -16,6 +16,14 @@ function getArrayParams(...arr) {
         }
         sum += arr[i];
     }
+// альтернативное суммирование массива
+    function summareArr (accum, element) {
+        return (accum + element);
+    }
+    const summa = arr.reduce(summareArr, 0);
+// должны быть одинаковые    
+    console.log(`сумма= ${summa}`);
+    console.log(`сумма1= ${sum}`);
 
     let avg = +((sum / arr.length).toFixed(2)); // среднее округленное до двух знаков
 
